@@ -16,7 +16,7 @@ module.exports = () => {
       });
 
       // Load User model
-      // to do
+      require('../app/models/user.server.model');
 
       // Return mongoose connection instance
       return db;
