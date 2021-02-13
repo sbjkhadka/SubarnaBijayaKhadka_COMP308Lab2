@@ -1,0 +1,48 @@
+/* body {
+  //background-color: #2222aa;
+  color: #2222aa;
+} */
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.border-style {
+  border: 2px solid #2222aa;
+  border-radius: 10px;
+  background-color: lavender;
+  padding: 50px;
+}
+small {
+    color: red;
+}
+
+small.date-holder {
+    color: #2222aa;
+}
+.left-col {
+  background-color: #2222aa;
+  color: lavender;
+}
+
+.right-col {
+  background-color: lavender;
+  color: 22#22aa;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+.label-text {
+  color: #2222aa;
+  font-weight: bold;
+}
+.bubble-box {
+  border: 2px solid #2222aa;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+
+
+}

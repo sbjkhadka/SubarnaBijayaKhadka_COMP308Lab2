@@ -47,7 +47,7 @@ module.exports = function () {
 
   // Load the routing files
   require("../app/routes/index.server.routes.js")(app);
-  // require("../app/routes/users.server.routes.js")(app);
+  require("../app/routes/users.server.routes.js")(app);
 
   // Configure static file serving
   app.use(express.static("./public"));
