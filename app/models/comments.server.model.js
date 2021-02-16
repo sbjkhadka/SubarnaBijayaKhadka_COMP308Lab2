@@ -1,11 +1,8 @@
 // Load the Mongoose module and Schema object
-const mongoose = require("mongoose");
-
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-//define a new CommentSchema
 const CommentSchema = new Schema({
-  //
   courseCode: String,
   courseName: String,
   program: String,
@@ -17,8 +14,7 @@ const CommentSchema = new Schema({
   },
   user: {
     type: Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
   },
 });
-//
-mongoose.model("Comment", CommentSchema);
+mongoose.model('Comment', CommentSchema);

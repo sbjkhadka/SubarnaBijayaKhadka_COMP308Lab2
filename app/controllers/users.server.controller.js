@@ -1,5 +1,6 @@
 const User = require('mongoose').model('User');
 var Comment = require("mongoose").model("Comment");
+var ObjectId = require("mongodb").ObjectID;
 
 exports.createNewUser = (req, res, next) => {
     console.log("reqBody", req.body);
@@ -63,7 +64,6 @@ exports.commentsByStudent = function (req, res, next) {
   } else {
     res.redirect(`/login?showError=0`);
   }
-
 };
 
 exports.commentsFromUserId = (req, res) => {
@@ -118,4 +118,21 @@ exports.studentList = (req, res) => {
       res.render('readComments', { students: users });
     }
   });
+};
+
+
+
+exports.deleteStudentById = (req, res) => {
+  User.deleteOne(
+    { _id: ObjectId(req.params.id.toString()) },
+    (error, result) => {
+      if (error) {
+        console.log(error);
+        return getErrorMessage(error);
+      } else {
+        console.log("deleted...", result);
+        res.redirect("/display_users");
+      }
+    }
+  );
 };

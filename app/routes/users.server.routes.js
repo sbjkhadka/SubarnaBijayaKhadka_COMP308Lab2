@@ -18,4 +18,5 @@ module.exports = (app) => {
       "/display_comments/:id/:firstName/:lastName",
       user.commentsFromUserId
     );
+    app.get("/delete/:id", user.deleteStudentById);
 };
